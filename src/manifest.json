@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "mamba-force",
+    "description": "Change all conda to mamba",
+    "version": "0.0.1",
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://anaconda.org/*/*"],
+        "js": ["index.js"]
+      }
+    ]
+  }
+  
