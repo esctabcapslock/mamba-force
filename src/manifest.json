@@ -1,15 +1,18 @@
 {
     "manifest_version": 3,
     "name": "mamba-force",
-    "description": "Change all conda to mamba",
+    "description": "Web browser extensions running on anaconda.org for Mamba users",
     "version": "0.0.1",
     "permissions": [
       "activeTab",
       "storage"
     ],
+    "host_permissions":[
+      "*://anaconda.org/*"
+    ],
     "content_scripts": [
       {
-        "matches": ["https://anaconda.org/*/*"],
+        "matches": ["*://anaconda.org/*/*"],
         "js": ["index.js"]
       }
     ]

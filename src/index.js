@@ -1,5 +1,4 @@
 
-
 let setting  = {
   is_mambaforce_newwindows : false,
   mamba_forge_value : false,
