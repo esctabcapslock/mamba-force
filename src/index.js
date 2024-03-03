@@ -284,28 +284,28 @@ function createPannel(){
     <div class='panel_setting_table_row'>
       <span class='panel_setting_table_cell'>force to mamba</span>
       <span class='panel_setting_table_cell'><label class="switch">
-        <input type="checkbox" id="toggleSwitch_mamba_forge_value" checked=${setting.mamba_forge_value}>
+        <input type="checkbox" id="toggleSwitch_mamba_forge_value" checked=${(setting.mamba_forge_value)?true:false}>
         <span class="slider"></span>
       </label></span>
     </div>
     <div class='panel_setting_table_row'>
       <span class='panel_setting_table_cell'>always add to Cart</span>
       <span class='panel_setting_table_cell'><label class="switch">
-        <input type="checkbox" id="toggleSwitch_always_add_to_cart" checked=${setting.always_add_to_cart}> 
+        <input type="checkbox" id="toggleSwitch_always_add_to_cart" checked=${(setting.always_add_to_cart)?true:false}> 
         <span class="slider"></span>
       </label></span>
     </div>
     <div class='panel_setting_table_row'>
       <span class='panel_setting_table_cell'>click to copy</span>
       <span class='panel_setting_table_cell'><label class="switch">
-        <input type="checkbox" id="toggleSwitch_click_to_copy" checked=${setting.click_to_copy}> 
+        <input type="checkbox" id="toggleSwitch_click_to_copy" checked=${(setting.click_to_copy)?true:false}> 
         <span class="slider"></span>
       </label></span>
     </div>
     <!--<div class='panel_setting_table_row'>
       <span class='panel_setting_table_cell'>remove logs when brower restarts</span>
       <span class='panel_setting_table_cell'><label class="switch">
-        <input type="checkbox" id="c" checked=${!setting.save_chart_to_storage}> 
+        <input type="checkbox" id="c" checked=${(!setting.save_chart_to_storage)?true:false}> 
         <span class="slider"></span>
       </label></span>
     </div>-->
