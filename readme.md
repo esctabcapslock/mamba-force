@@ -16,7 +16,7 @@ And then, `mamba install conda-forge/label/gcc7::numpy conda-forge/label/gcc7::s
 
 ### Chromium (like Google Chrome, Edge, Brave...)
 1. Download this project and decompress it.
-2. Visit <a src='chrome://extensions'>chrome://extensions</a>
+2. Visit `chrome://extensions`
 3. Allow Developer Mode.
 4. Click "Load unpacked".
 5. Select src folder for this project.
