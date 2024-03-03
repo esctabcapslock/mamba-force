@@ -193,7 +193,7 @@ function print_logs(){
 
     // add copy
     code_ele.addEventListener('click',e=>{
-      copyToClipboard(e.target.textContent)
+      copyToClipboard(`${(setting.mamba_forge_value?'mamba':'conda')} install ${e.target.textContent}`)
       // createTooltipBottomElement(code_ele, 'copied!')
     })
   })
@@ -397,9 +397,9 @@ document.getElementById('copy_whole_logs').addEventListener('click',e=>{
   .sliding-panel {
     position: fixed;
     top: 0;
-    right: -300px;
+    right: -330px;
     height: 100vh;
-    width: 350px;
+    width: 330px;
     background-color: #f1f1f1;
     padding: 20px;
     transition: right 0.3s ease-in-out;
@@ -550,6 +550,10 @@ function add_localstorage_evant(){
 1;
 (()=>{
   // ... //
+  if (document.getElementsByClassName('panel')[1] == undefined){
+    return
+  }
+
   global.bc = new BroadcastChannel("storage_changed");
   global.bc.onmessage = (event) => {
     console.log('bc.onmessage',event, event.data)
